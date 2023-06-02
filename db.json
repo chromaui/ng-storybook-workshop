@@ -1,0 +1,19 @@
+{
+  "donuts": [
+    {
+      "id": "1",
+      "name": "Butter Toast2",
+      "icon": "caramel-swirl",
+      "price": 20,
+      "description": "some kind of donut"
+    },
+    {
+      "id": "2",
+      "name": "Old-fashioned Glazed",
+      "icon": "glazed-fudge",
+      "price": 200,
+      "promo": "limited",
+      "description": "some kind of donut"
+    }
+  ]
+}
