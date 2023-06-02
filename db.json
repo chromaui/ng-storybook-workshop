@@ -14,6 +14,30 @@
       "price": 200,
       "promo": "limited",
       "description": "some kind of donut"
+    },
+    {
+      "id": "3",
+      "name": "Vanilla sprinkle",
+      "icon": "vanilla-sundae",
+      "price": 200,
+      "promo": "limited",
+      "description": "some kind of donut"
+    },
+    {
+      "id": "4",
+      "name": "Cinnamon sugar",
+      "icon": "sour-supreme",
+      "price": 200,
+      "promo": "limited",
+      "description": "some kind of donut"
+    },
+    {
+      "id": "5",
+      "name": "Nanaimo",
+      "icon": "just-chocolate",
+      "price": 200,
+      "promo": "new",
+      "description": "some kind of donut"
     }
   ]
 }
