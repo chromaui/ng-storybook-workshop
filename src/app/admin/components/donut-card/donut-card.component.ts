@@ -32,7 +32,7 @@ import { Donut } from '../../models/donut.model';
           </ng-container>
         </p>
         <p class="donut-card-price">
-          {{ donut.price / 100 | currency: 'USD':'symbol' }}
+          {{ donut.price / 100 | currency : 'USD' : 'symbol' }}
         </p>
       </div>
     </a>

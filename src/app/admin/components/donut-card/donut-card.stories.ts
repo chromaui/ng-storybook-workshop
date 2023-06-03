@@ -6,7 +6,7 @@ import { DonutCardComponent } from './donut-card.component';
 import { Donut } from '../../models/donut.model';
 
 const meta: Meta<DonutCardComponent> = {
-  title: 'Example/DonutCardComponent',
+  title: 'Components/DonutCardComponent',
   component: DonutCardComponent,
   tags: ['autodocs'],
   decorators: [
