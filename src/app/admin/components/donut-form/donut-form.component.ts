@@ -17,7 +17,7 @@ import { Donut } from '../../models/donut.model';
           class="input"
           required
           minlength="5"
-          [ngModel]="donut?.name"
+          [ngModel]="donut.name"
           [ngModelOptions]="{ updateOn: 'blur' }"
           #name="ngModel"
         />
