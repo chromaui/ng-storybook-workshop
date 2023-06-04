@@ -27,7 +27,7 @@ type Story = StoryObj<DonutListComponent>;
 const mockDonuts = [
   {
     id: '1',
-    name: 'Butter Toast2',
+    name: 'Butter Toast',
     icon: 'caramel-swirl',
     price: 20,
     description: 'some kind of donut',
