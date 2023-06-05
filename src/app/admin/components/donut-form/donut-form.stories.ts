@@ -4,14 +4,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { userEvent, within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 import { DonutFormComponent } from './donut-form.component';
-import { DonutCardComponent } from '../donut-card/donut-card.component';
 
 const meta: Meta<DonutFormComponent> = {
   title: 'Components/DonutFormComponent',
   component: DonutFormComponent,
   decorators: [
     moduleMetadata({
-      imports: [RouterTestingModule, DonutCardComponent],
+      imports: [RouterTestingModule],
     }),
   ],
   parameters: {
