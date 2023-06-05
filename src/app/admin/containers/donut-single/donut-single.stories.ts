@@ -35,9 +35,6 @@ const meta: Meta<DonutSingleComponent> = {
         {
           provide: Router,
           useValue: mockRouter,
-          // useValue: {
-          //   navigate: () => {},
-          // },
         },
       ],
     }),
