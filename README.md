@@ -1,18 +1,21 @@
-<h1 align="center">
-<img width="40" valign="bottom" src="https://ultimatecourses.com/static/icons/angular.svg">
-Angular Basics v14: Starter Project
-</h1>
-<h4 align="center">Starter project for the Ultimate Courses <a href="https://ultimatecourses.com/learn/angular-basics" target="_blank">Angular Basics course</a>.</h4>
+# Testing the front of the front-end Workshop (ngConf 2023)
+
+Based on the [Angular Basics v14: Starter Project](https://github.com/ultimatecourses/angular-basics-src)
 
 ---
 
-<div align="center">
-<a href="https://ultimatecourses.com/courses/angular" target="_blank"><img width="100%" src="https://ultimatecourses.com/static/banners/ultimate-angular-leader.svg"></a>
-</div>
+## Start Storybook
 
----
+Run `yarn storybook` to start Storybook locally and output the address. Depending on your system configuration, it will automatically open the address in a new browser tab.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+## Run Storybook tests
+
+While Storybook is running, open a new terminal window and run the test-runner with: `yarn test-storybook`.
+
+Storybook test runner turns all of your stories into executable tests. It is powered by Jest and Playwright.
+
+- For those [without a play function](https://storybook.js.org/docs/react/writing-stories/introduction): it verifies whether the story renders without any errors.
+- For those [with a play function](https://storybook.js.org/docs/react/writing-stories/play-function): it also checks for errors in the play function and that all assertions passed.
 
 ## Development server
 
