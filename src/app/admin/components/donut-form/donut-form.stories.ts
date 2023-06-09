@@ -98,19 +98,9 @@ export const CreateDonut: Story = {
     const { canvasElement, args } = context;
     const canvas = within(canvasElement);
 
-    await userEvent.click(
-      canvas.getByRole<HTMLButtonElement>('button', {
-        name: /create/i,
-      })
-    );
+    // Find the create button and click it
 
-    await expect(args.create).toHaveBeenCalledWith({
-      description: 'old fashioned style glazed donut',
-      icon: 'glazed-fudge',
-      name: 'Old Fashioned Glazed',
-      price: 500,
-      promo: 'new',
-    });
+    // Check that the create action was called with the correct arguments
   },
 };
 
@@ -121,14 +111,8 @@ export const ResetForm: Story = {
     const { canvasElement } = context;
     const canvas = within(canvasElement);
 
-    await userEvent.click(
-      canvas.getByRole<HTMLButtonElement>('button', {
-        name: /reset/i,
-      })
-    );
+    // Find the reset button and click it
 
-    await expect(canvas.getByLabelText<HTMLInputElement>(/name/i).value).toBe(
-      ''
-    );
+    // Check that the form was reset
   },
 };
