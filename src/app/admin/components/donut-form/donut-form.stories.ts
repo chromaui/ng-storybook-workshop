@@ -99,8 +99,16 @@ export const CreateDonut: Story = {
     const canvas = within(canvasElement);
 
     // Find the create button and click it
+    await userEvent.click(canvas.getByRole('button', { name: /create/i }));
 
     // Check that the create action was called with the correct arguments
+    await expect(args.create).toHaveBeenCalledWith({
+      name: 'Old Fashioned Glazed',
+      icon: 'glazed-fudge',
+      price: 500,
+      promo: 'new',
+      description: 'old fashioned style glazed donut',
+    });
   },
 };
 

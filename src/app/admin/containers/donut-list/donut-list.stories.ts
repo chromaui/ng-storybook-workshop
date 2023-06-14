@@ -80,4 +80,14 @@ export const WithDonuts: Story = {
   },
 };
 
-export const APIError: Story = {};
+export const APIError: Story = {
+  parameters: {
+    msw: {
+      handlers: [
+        rest.get('/api/donuts', (req, res, ctx) => {
+          return res(ctx.status(500));
+        }),
+      ],
+    },
+  },
+};

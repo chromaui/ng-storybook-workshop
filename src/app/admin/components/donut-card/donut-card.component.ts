@@ -65,7 +65,7 @@ import { Donut } from '../../models/donut.model';
           color: #c14583;
         }
         &-price {
-          font-size: 14px;
+          font-size: 32px;
           color: #c14583;
         }
         &-icon {
