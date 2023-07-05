@@ -34,6 +34,7 @@ import { Donut } from '../../models/donut.model';
         <p class="donut-card-price">
           {{ donut.price / 100 | currency : 'USD' : 'symbol' }}
         </p>
+        <p class="donut-card-price">#{{ status.text }}{{ status.type }}</p>
       </div>
     </a>
   `,
@@ -78,5 +79,6 @@ import { Donut } from '../../models/donut.model';
 })
 export class DonutCardComponent {
   @Input() donut!: Donut;
+  @Input() status!: any;
   constructor() {}
 }

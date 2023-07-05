@@ -1,11 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { moduleMetadata } from '@storybook/angular';
+import { moduleMetadata, componentWrapperDecorator } from '@storybook/angular';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DonutCardComponent } from './donut-card.component';
 
 import { Donut } from '../../models/donut.model';
 
-const meta: Meta<DonutCardComponent> = {
+const meta: Meta<
+  DonutCardComponent & { statusText: string; statusType: string }
+> = {
   title: 'Components/DonutCardComponent',
   component: DonutCardComponent,
   tags: ['autodocs'],
@@ -15,14 +17,26 @@ const meta: Meta<DonutCardComponent> = {
     moduleMetadata({
       imports: [RouterTestingModule],
     }),
+    componentWrapperDecorator(DonutCardComponent, ({ args }) => {
+      const { statusText, statusType, ...otherArgs } = args;
+      const status = { text: statusText, type: statusType };
+      return {
+        ...otherArgs,
+        status,
+      };
+    }),
   ],
 };
 
 export default meta;
-type Story = StoryObj<DonutCardComponent>;
+type Story = StoryObj<
+  DonutCardComponent & { statusText: string; statusType: string }
+>;
 
 export const Basic: Story = {
   args: {
+    statusText: 'foo',
+    statusType: 'success',
     donut: {
       id: '1',
       name: 'Caramel swirl',
